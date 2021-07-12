@@ -1,0 +1,162 @@
+.header {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 300px;
+    height: 100%;
+    /* background-color: red; */
+    z-index: 2;
+    border: solid;
+    border-color: rgb(20, 20, 20);
+    border-width: 0px 2px 0px 0px;
+}
+* {
+    color: rgb(20, 20, 20);
+}
+.all_notes {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    top: 41px;
+    left: 0px;
+    width: 100%;
+    height: calc(100% - 81px);
+}
+.note_list {
+    transition: all 300ms;
+    padding: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 40px;
+}
+.note_list > .title {
+    font-weight: 700;
+}
+.note_list > .body {
+    color: gray;
+}
+.highlight {
+    background: rgb(20, 20, 20);
+    color: white;
+    outline: none;
+    user-select: none;
+    transform: scale(1.01);
+}
+.highlight * {
+    color: white;
+}
+*::-webkit-scrollbar {
+    width: 0px;
+}
+.note_body {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    width: calc(100% - 320px);
+    height: 100%;
+    overflow: scroll;
+    padding-left: 20px;
+}
+.note_body * {
+    border: none;
+    resize: none;
+    outline: none;
+}
+.note_body > div {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.note_body .title {
+    font-weight: 700;
+    font-size: 41px;
+    /* background-color: red; */
+    max-width: 400px;
+}
+.note_body .body {
+    width: 90%;
+    height: 100%;
+    font-size: 21px;
+    color: rgb(55, 55, 55);
+}
+.create_new {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 50px;
+    background: rgb(20, 20, 20);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    transition: all 300ms;
+    user-select: none;
+}
+.create_new:active {
+    font-size: 11px;
+}
+
+.hidden {
+    display: none;
+}
+.show {
+    display: block;
+}
+
+.btn {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    height: 40px;
+    width: 100px;
+    background-color: rgb(20, 20, 20);
+    color: white;
+    border-radius: 100px;
+    font-weight: 600;
+    transition: all 200ms;
+}
+.btn:active {
+    transform: scale(0.95);
+}
+
+.line {
+    position: relative;
+    width: 100%;
+    height: 1px;
+    border-radius: 20px;
+    background-color: rgb(20, 20, 20);
+    margin: 20px 0px 20px 0px;
+}
+.title_wrap {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+.delete {
+    margin-left: auto;
+    margin-right: 100px;
+    background-color: white;
+    font-size: 25px;
+}
+
+.search {
+    height: 40px;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    border: solid;
+    z-index: 2;
+    border-width: 0 0 1px 0;
+}
+.search > input {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    color: rgb(20, 20, 20);
+    width: 90%;
+}
