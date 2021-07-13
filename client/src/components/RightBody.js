@@ -6,6 +6,8 @@ import { faTrashAlt } from "@fortawesome/free-solid-svg-icons"
 
 import { create_note_url, delete_note_url, update_note_url } from "../apis"
 
+import folder_logo from "../assets/images/folder.png"
+
 import {
     changed,
     notes_state,
@@ -15,7 +17,15 @@ import {
 } from "../states"
 
 function NoNoteOpened() {
-    return <div>No note is selected</div>
+    return (
+        <div className="not-selected">
+            <img className="logo" src={folder_logo} />
+            <div className="heading">No notes selected yet</div>
+            <div className="desc">
+                Your notes from Google Keep will show up here.
+            </div>
+        </div>
+    )
 }
 
 function OpenedNote({ note }) {

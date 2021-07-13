@@ -160,3 +160,18 @@
     color: rgb(20, 20, 20);
     width: 90%;
 }
+
+.not-selected {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgb(55, 55, 55);
+}
+.not-selected > .heading {
+    font-weight: 600;
+    font-size: 21px;
+}
+.not-selected > .desc {
+    font-size: 13px;
+}
